@@ -68,8 +68,8 @@ async def send_question(update: Update, context: ContextTypes.DEFAULT_TYPE):
     state["questions"][state["current"]]["shuffled"] = shuffled_options
     state["questions"][state["current"]]["correct_index"] = correct_index
 
-    question_text = f"{q['en']}
-{q['ar']}"
+    question_text = f"{q['en']}\n{q['ar']}"
+
     await context.bot.send_poll(
         chat_id=update.effective_chat.id,
         question=question_text,
