@@ -100,7 +100,7 @@ async def show_result(update: Update, context: ContextTypes.DEFAULT_TYPE):
     total = len(state["questions"])
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text=f"✅ اختبارك انتهى!
+        text=f"✅ اختبارك انتهى!"
 📊 نتيجتك: {score}/{total} ({(score/total)*100:.0f}%)"
     )
 
