@@ -37,11 +37,12 @@ def generate_questions(count=5, difficulty="easy"):
     return random.sample(base_questions * (count // len(base_questions) + 1), count)
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        "Welcome!
+ await update.message.reply_text(
+    """Welcome!
 أرسل ملف المحاضرة أو ابدأ بـ /quiz لتوليد اختبار.
-اكتب /quiz لتجربة توليد أسئلة."
-    )
+اكتب /quiz لتجربة توليد أسئلة."""
+)
+
 
 async def quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
