@@ -38,10 +38,9 @@ def generate_questions(count=5, difficulty="easy"):
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "👋 Welcome! أرسل ملف المحاضرة أو ابدأ بـ /quiz لتوليد اختبار.
-"
-        "اكتب /quiz لتجربة توليد أسئلة."
-
+        "Welcome!
+أرسل ملف المحاضرة أو ابدأ بـ /quiz لتوليد اختبار.
+اكتب /quiz لتجربة توليد أسئلة."
     )
 
 async def quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
